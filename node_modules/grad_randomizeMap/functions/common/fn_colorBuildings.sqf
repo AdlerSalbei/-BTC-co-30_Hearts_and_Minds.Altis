@@ -14,6 +14,8 @@ _housesArray = nearestTerrainObjects [_pos, ["House"], _distance, false, true];
 {
 	if (isClass (missionConfigFile >> "cfgBuildingReplacement" >> (typeOf _x))) then {
 		_replacement = selectRandom (getArray (missionConfigFile >> "cfgBuildingReplacement" >> (typeOf _x) >> "replacementArray"));
-		[_x, _replacement] call grad_randomizeMap_fnc_replaceBuilding;
+		if ((typeOf _X) != _replacement) then {
+			[_x, _replacement] call grad_randomizeMap_fnc_replaceBuilding;
+		};
 	};
 }forEach _housesArray;

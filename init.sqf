@@ -6,8 +6,8 @@ call compile preprocessFile "core\def\mission.sqf";
 call compile preprocessFile "define_mod.sqf";
 
 if (isServer) then {
+    [] execVM "tfarsettings.sqf";
     call compile preprocessFile "core\init_server.sqf";
-    [[worldSize/2,worldSize/2,0], worldSize] call grad_randomizeMap_fnc_colorBuildings;
 };
 
 call compile preprocessFile "core\init_common.sqf";

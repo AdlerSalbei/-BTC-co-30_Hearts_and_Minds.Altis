@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=191;
+		nextID=196;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8306.2861,84.944511,10056.931};
-		dir[]={0.56635445,-0.65549594,0.49975523};
-		up[]={0.49164182,0.75502402,0.43383077};
-		aside[]={0.66171157,-1.9532163e-006,-0.74988496};
+		pos[]={8289.9912,99.011871,10043.036};
+		dir[]={0.44336542,-0.7528559,0.48669851};
+		up[]={0.50710571,0.65793401,0.55667275};
+		aside[]={0.73933697,-1.6960548e-006,-0.6735};
 	};
 };
 binarizationWanted=0;
@@ -43,13 +43,14 @@ addons[]=
 	"Redd_Tank_Fuchs_1A4",
 	"rhs_c_cars",
 	"rhs_c_mi28",
-	"A3_Structures_F_Mil_Flags"
+	"A3_Structures_F_Mil_Flags",
+	"A3_Structures_F_EPB_Civ_Graffiti"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -165,6 +166,13 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item17
+		{
+			className="A3_Structures_F_EPB";
+			name="Arma 3 Adapt Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=2442963;
@@ -188,6 +196,24 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -202,24 +228,6 @@ class CustomAttributes
 						};
 					};
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
 				};
 			};
 		};
@@ -2762,12 +2770,16 @@ class Mission
 		resistanceWest=0;
 		resistanceEast=1;
 		startWeather=0.29999998;
-		startWind=0.099999994;
+		startWind=0.20177804;
+		startWindDir=270;
 		startWaves=0.099999994;
+		startGust=0.10049523;
 		forecastWeather=0.29999998;
-		forecastWind=0.099999994;
+		forecastWind=0.20459145;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
+		forecastGust=0.09768182;
+		forecastWindDir=270;
 		rainForced=1;
 		lightningsForced=1;
 		wavesForced=1;
@@ -2782,7 +2794,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=52;
+		items=55;
 		class Item0
 		{
 			dataType="Marker";
@@ -2845,7 +2857,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -3226,7 +3238,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""interpreter"",true]";
-						description="Team Lead";
+						description=$STR_BTC_HAM_MSQM_INTERPRETER;
 						isPlayable=1;
 					};
 					id=29;
@@ -4225,7 +4237,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -4267,7 +4279,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -4309,7 +4321,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -4439,7 +4451,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -4501,7 +4513,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -4601,7 +4613,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -4777,7 +4789,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -4915,7 +4927,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -5052,7 +5064,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -5190,7 +5202,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -5202,8 +5214,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8239.4424,80.010086,10049.84};
-				angles[]={6.2591896,5.5807619,0.017332481};
+				position[]={8239.4424,80.010094,10049.84};
+				angles[]={6.2591867,5.58076,0.01733112};
 			};
 			side="Empty";
 			flags=4;
@@ -5216,6 +5228,7 @@ class Mission
 			};
 			id=166;
 			type="RHS_UH60M_d";
+			atlOffset=7.6293945e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5313,7 +5326,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""rhs_weap_m4_carryhandle"",""FirstAidKit"",""Medikit""],[2,10,2]],[[""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_an_m8hc""],[12,4,2,2,4]],[[],[]],[[""B_Parachute""],[4]]],false]";
+							value="[[[[""ACE_VMM3""],[4]],[[],[]],[[""ACE_DefusalKit""],[4]],[[],[]]],false]";
 						};
 					};
 				};
@@ -5358,6 +5371,7 @@ class Mission
 			};
 			id=167;
 			type="rhs_mi28n_vvsc";
+			atlOffset=0.11984253;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -5407,7 +5421,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8317.0117,79.598755,10075.77};
-				angles[]={6.2791886,4.2183876,6.2445378};
+				angles[]={6.2791886,2.4476688,6.2445378};
 			};
 			side="Empty";
 			flags=4;
@@ -5417,6 +5431,54 @@ class Mission
 			};
 			id=190;
 			type="Flag_UK_F";
+		};
+		class Item52
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8313.5654,77.600357,10069.415};
+				angles[]={0,5.7028413,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=191;
+			type="Land_Graffiti_01_F";
+			atlOffset=1.6932297;
+		};
+		class Item53
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8310.1162,77.379593,10077.631};
+				angles[]={0,2.5134122,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=192;
+			type="Land_Graffiti_03_F";
+			atlOffset=1.4714661;
+		};
+		class Item54
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8307.9102,77.332466,10070.65};
+				angles[]={0,5.7118111,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=195;
+			type="Land_Graffiti_05_F";
+			atlOffset=1.3147202;
 		};
 	};
 };

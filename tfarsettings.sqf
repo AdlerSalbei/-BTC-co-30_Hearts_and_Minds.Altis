@@ -10,3 +10,4 @@ publicVariable "TF_SAME_LR_FREQUENCIES_FOR_SIDE";
 publicVariable "TF_SAME_SW_FREQUENCIES_FOR_SIDE";
 publicVariable "TF_TERRAIN_INTERCEPTION_COEFFICIENT";
 publicVariable "tf_no_auto_long_range_radio";
+publicVariable "tf_east_radio_code";

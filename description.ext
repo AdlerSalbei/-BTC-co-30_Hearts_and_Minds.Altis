@@ -1,11 +1,9 @@
-#define MODULES_DIRECTORY node_modules
-#include "node_modules\grad_randomizeMap\cfgBuildingList.hpp"
 
 loadScreen = "core\img\btc.paa";
 author = $STR_BTC_HAM_DESCR_AUTHOR;
 onLoadName = $STR_BTC_HAM_DESCR_NAME;
 onLoadMission = $STR_BTC_HAM_DESCR_MISSION;
-enabledebugconsole = 1;
+enableDebugConsole = 1;
 
 #include "core\def\dlg_def.hpp"
 
@@ -32,7 +30,6 @@ class RscTitles {
 
 class CfgFunctions {
     #include "core\def\functions.hpp"
-    #include "node_modules\grad_randomizeMap\cfgFunctions.hpp"
     // add your own functions below
 };
 
